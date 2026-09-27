@@ -76,7 +76,8 @@ create policy "Members can read their cluster profiles"
 on public.cluster_workspaces for select to authenticated
 using (exists (
   select 1 from public.cluster_memberships membership
-  where membership.cluster_id = id and membership.user_id = (select auth.uid())
+  where membership.cluster_id = public.cluster_workspaces.id
+    and membership.user_id = (select auth.uid())
 ));
 
 create policy "LSA members can update their cluster profiles"
@@ -96,7 +97,8 @@ create policy "Members can read shared cluster data"
 on public.cluster_workspace_data for select to authenticated
 using (exists (
   select 1 from public.cluster_memberships membership
-  where membership.cluster_id = cluster_id and membership.user_id = (select auth.uid())
+  where membership.cluster_id = public.cluster_workspace_data.cluster_id
+    and membership.user_id = (select auth.uid())
 ));
 
 create policy "LSA members can create shared cluster data"
