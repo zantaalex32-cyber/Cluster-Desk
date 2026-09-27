@@ -11,8 +11,8 @@
 .creator-credit{display:block;margin-top:9px;color:#84777a;font-size:10px}
 .setup-credit{font-size:11px}
 @media(max-width:700px){.setup .brand-logo{width:150px;height:150px}}
-.nav-item.active{background:#fbe7ea;color:#9f1e33}
-.nav-item:hover{background:#fbf0f1;color:#a82136}
+.nav-item.active{background:var(--mint);color:var(--green-dark)}
+.nav-item:hover{background:#f0f3ff;color:var(--green-dark)}
 #print-report{display:none}
 .login-panel{width:min(500px,100%);padding:36px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);animation:rise .35s ease both}
 .login-logo{display:block;width:112px;height:112px;object-fit:contain;background:#151e58;border-radius:10px;margin-bottom:22px}
@@ -28,4 +28,17 @@
 .local-access:hover{text-decoration:underline}
 .auth-note{font-size:10px;line-height:1.55;color:var(--muted);margin:16px 0 0}
 .auth-sign-out{font-size:11px;padding:7px 10px}
+.role-badge{border-radius:20px;background:#e9edff;color:#2948bd;padding:6px 9px;font-size:10px;font-weight:700;white-space:nowrap}
+.role-badge.hidden{display:none}
+.member-management{max-width:760px;margin:15px 0 0}
+.invite-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,.75fr) auto;align-items:end;gap:12px}
+.invite-form .field{margin-bottom:0}
+.invite-result{margin-top:16px;padding:13px;border:1px solid var(--line);background:#f7f8fc;border-radius:8px}
+.invite-result label,.invite-result small{display:block;color:var(--muted);font-size:10px;margin-bottom:7px}
+.invite-result small{margin:8px 0 0}
+.invite-link-row{display:flex;gap:8px}
+.invite-link-row input{min-width:0;flex:1;border:1px solid var(--line);border-radius:7px;padding:9px;font-size:11px}
+.read-only [data-add],.read-only [data-edit],.read-only [data-delete],.read-only #edit-profile,.read-only #delete-cluster,.read-only #add-cluster{display:none!important}
+.read-only th:last-child,.read-only td:last-child{display:none}
+@media(max-width:700px){.invite-form{grid-template-columns:1fr}.invite-link-row{flex-direction:column}.role-badge{font-size:9px;padding:5px 7px}}
 @media print{@page{margin:18mm}body>*{visibility:hidden!important}#print-report.active,#print-report.active *{visibility:visible!important}#print-report.active{display:block!important;position:absolute;inset:0 auto auto 0;width:100%;padding:0;background:#fff;color:#171214}#print-report pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:10.5pt/1.55 Georgia,"Times New Roman",serif}.modal-backdrop{display:none!important}}
