@@ -14,4 +14,18 @@
 .nav-item.active{background:#fbe7ea;color:#9f1e33}
 .nav-item:hover{background:#fbf0f1;color:#a82136}
 #print-report{display:none}
+.login-panel{width:min(500px,100%);padding:36px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);animation:rise .35s ease both}
+.login-logo{display:block;width:112px;height:112px;object-fit:contain;background:#151e58;border-radius:10px;margin-bottom:22px}
+.login-panel h1{font:500 30px/1.15 Georgia,"Times New Roman",serif;margin:0}
+.login-description{font-size:13px;color:var(--muted);margin:10px 0 22px}
+.google-button{width:100%;min-height:46px;display:flex;align-items:center;justify-content:center;gap:10px;border:1px solid #d6d9e1;border-radius:7px;background:#fff;color:#23283c;font-size:13px;font-weight:650}
+.google-button:hover{background:#f8f9fc;border-color:#aeb7ce}
+.google-button svg{width:20px;height:20px}
+.auth-status{min-height:16px;color:#9d343e;font-size:11px;margin:9px 0 0}
+.login-divider{display:flex;align-items:center;gap:12px;color:#8b91a3;font-size:10px;margin:12px 0}
+.login-divider:before,.login-divider:after{content:"";height:1px;background:var(--line);flex:1}
+.local-access{border:0;background:transparent;color:#3c63ed;font-size:12px;font-weight:650;padding:5px 0}
+.local-access:hover{text-decoration:underline}
+.auth-note{font-size:10px;line-height:1.55;color:var(--muted);margin:16px 0 0}
+.auth-sign-out{font-size:11px;padding:7px 10px}
 @media print{@page{margin:18mm}body>*{visibility:hidden!important}#print-report.active,#print-report.active *{visibility:visible!important}#print-report.active{display:block!important;position:absolute;inset:0 auto auto 0;width:100%;padding:0;background:#fff;color:#171214}#print-report pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:10.5pt/1.55 Georgia,"Times New Roman",serif}.modal-backdrop{display:none!important}}
